@@ -1,0 +1,26 @@
+# SciTE session file
+
+buffer.1.path=H:\ds_mod_creator\src\main.wlua
+buffer.1.position=780
+buffer.1.current=1
+
+buffer.2.path=H:\ds_mod_creator\src\module\menu.lua
+buffer.2.position=129
+
+buffer.3.path=H:\ds_mod_creator\src\module\win.lua
+buffer.3.position=1
+
+buffer.4.path=H:\ds_mod_creator\wxlua相关\自带例程\auidemo.wx - 复制.wlua
+buffer.4.position=27
+
+buffer.5.path=H:\ds_mod_creator\src\module\aui.lua
+buffer.5.position=167
+
+buffer.6.path=H:\ds_mod_creator\src\module\wxtree.lua
+buffer.6.position=1
+
+buffer.7.path=H:\ds_mod_creator\wxlua相关\代码区\aui1.wlua
+buffer.7.position=837
+
+buffer.8.path=H:\ds_mod_creator\src\module\ID.lua
+buffer.8.position=206

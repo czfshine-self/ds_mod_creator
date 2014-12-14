@@ -376,7 +376,7 @@ function MyFrame:create(parent, id, title, pos, size, style)
                   CenterPane():PaneBorder(false));
 
     --// add the toolbars to the manager
-    
+
 
     self.m_mgr:AddPane(tb2, wxaui.wxAuiPaneInfo():
                   Name(wxT("tb2")):Caption(wxT("Toolbar 2")):
