@@ -9,14 +9,7 @@ Tree=Class(function(self,frame,data)
 	local tree=self.tree
 
 
-	self.api=wxaui.wxAuiPaneInfo()
-	self.api:Name("test7")
-	self.api:Caption("Client Size Reporter")
-	self.api:Left()
-	self.api:Layer(1)
-	self.api:CloseButton(true)
-	self.api:MaximizeButton(true)
-
+	
 
 	local root_id = tree:AddRoot( "Root" )
 	local parent_id = tree:AppendItem( root_id, "Parent " )
