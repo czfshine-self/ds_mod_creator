@@ -1,1 +1,2 @@
-os.execute "bin\\lua.exe src\\main.lua"
+
+dofile("src\\main.lua")

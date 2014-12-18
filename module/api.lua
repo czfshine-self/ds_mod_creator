@@ -6,50 +6,64 @@ function addapi(name,fn)
 end
 
 addapi("Editbook",function (self)
-  self.api=wxaui.wxAuiPaneInfo()
-  self.api:Name("test")
-  self.api:Caption("Client Size Reporter")
-  self.api:Right()
-  self.api:Layer(2)
-  self.api:CloseButton(true)
-  self.api:MaximizeButton(true)
-  self.api:CaptionVisible (false)
-  self.api:Center()
+  self.api=wxaui.wxAuiPaneInfo():
+    Name("test"):
+    Caption("Client Size Reporter"):
+    Right():
+    Layer(2):
+    CloseButton(true):
+    MaximizeButton(true):
+    CaptionVisible (false):
+    Center()
   return self.api
 end)
 
 
 
 addapi("Tree",function(self)
-    self.api=wxaui.wxAuiPaneInfo()
-	self.api:Name("test7")
-	self.api:Caption("Client Size Reporter")
-	self.api:Left()
-	self.api:Layer(1)
-	self.api:BestSize(200,200)
+    self.api=wxaui.wxAuiPaneInfo():
+      Name("test7"):
+      Caption("Client Size Reporter"):
+      Left():
+      Layer(1):
+      BestSize(200,200)
+
+return self.api
+end)
+addapi("Grid",function(self)
+    self.api=wxaui.wxAuiPaneInfo():
+      Name("test7"):
+      Caption("Client Size Reporter"):
+      Right():
+      Layer(1):
+      BestSize(200,200)
 
 return self.api
 end)
 
+
 addapi("Text",function (self)
-  self.api=wxaui.wxAuiPaneInfo()
-  self.api:Name("")
-  self.api:Caption("")
-  self.api:Right()
-  self.api:Layer(3)
-  self.api:CaptionVisible (false)
-  self.api:Bottom()
-  self.api:BestSize(200,200)
+  self.api=wxaui.wxAuiPaneInfo():
+    Name(""):
+    Caption(""):
+    Right():
+    Layer(3):
+    CaptionVisible (false):
+    Bottom():
+    BestSize(200,200)
   return self.api
 end)
 addapi("Run",function (self)
-  self.api=wxaui.wxAuiPaneInfo()
-  self.api:Name("")
-  self.api:Caption("")
-  self.api:Left()
-  self.api:Layer(3)
-  self.api:CaptionVisible (false)
-  self.api:Bottom()
-  self.api:BestSize(200,200)
+  self.api=wxaui.wxAuiPaneInfo():
+    Name(""):
+    Caption(""):
+    Left():
+    Layer(3):
+    CaptionVisible (false):
+  --self.api:PaneBorder(true)
+    Movable(false):
+    Bottom():
+    --PinButton(true):
+    BestSize(200,200)
   return self.api
 end)

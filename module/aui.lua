@@ -4,19 +4,22 @@ require "module.editor"
 require "module.text"
 require "module.api"
 require "module.run"
+require "module.Grid"
 Aui=Class(function (self,frame)
 
 	self.m_mgr = wxaui.wxAuiManager()
   self.m_mgr:SetManagedWindow(frame)
   self.frame=frame
   
-  self:Add(Tree,"Tree","tree")
+  self:Add(Tree,"Tree","notebook")
   self:Add(Editor,"Editbook","notebook")
   self:Add(Text,"Text","notebook")
   self:Add(Run,"Run","notebook")
+  self:Add(Grid,"Grid","notebook")
 		--=================!!!!
   self.m_mgr:Update()--is require
 		--===================
+  
 
 end)
 function Aui:Add(Class,name,child)
