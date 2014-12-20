@@ -8,7 +8,29 @@ ds_mod_creator（unfinished）
 
 ================================================
 
-编译的依赖关系
+如何运行
 =================================================
-本项目使用lua脚本语言，脚本代码无需编译。但是，它包含了`wxlua`库，本仓库提供了一个编译好的wx.dll（32bit for window）直接给lua调用，如果你是linux系统或者要使用64bit的，去wxlua官网看。
-还有，
+window下双击win32run.bat，或者命令行：
+```bat
+bin\lua.exe src\main.lua
+```
+linux 下运行
+```sh
+./ds_mod_creator.sh
+```
+或者 在32位
+```sh
+bin/linux/x86/lua src/main.lua
+```
+在64位
+```sh
+bin/linux/x64/lua src/main.lua
+```
+
+加入我们
+==============================================================
+有github账号的点击右上方的fork，clone一份到你的pc上，再pull给我。
+
+没有github账号的，点击右方的`Download Zip`按钮下载这个项目，要提交代码的话联系`1486276329@qq.com`。
+
+欢迎加入qq群411237587，一起讨论。
