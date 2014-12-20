@@ -1,5 +1,7 @@
-
--- put bin/ and lualibs/ first to avoid conflicts with included modules
+--coding: UTF-8-------
+--获取系统版本信息
+--------------------------------------------------
+-- put bin/ first to avoid conflicts with included modules
 -- that may have other versions present somewhere else in path/cpath.
 os.iswindows = os.getenv('WINDIR') or (os.getenv('OS') or ''):match('[Ww]indows')
 

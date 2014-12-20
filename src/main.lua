@@ -13,6 +13,10 @@ require("module.class")
 Menu=require("module.menu")
 MainWin=require("module.win")
 
+idclass=require "module.ID"
+
+ID=idclass()
+
 --==string================
 strings={}
 strings.view={}
@@ -32,8 +36,11 @@ function MyApp:OnInit()
 						wx.wxDEFAULT_FRAME_STYLE
 						+wx.wxMAXIMIZE)
 	local frame=mainwin.frame
+  
+  require "module.event"
+  eventfn.frame=frame
 
-	local menu=Menu()
+	local menu=Menu(frame)
 	local menubar=menu.menubar
 	frame:SetMenuBar(menubar)
 

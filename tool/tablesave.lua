@@ -1,3 +1,6 @@
+-- coding: UTF-8-----------------
+--将table 保存进文件，与读取保存文件
+---------------------------------
 --[[
 	Save Table to File
 	Load Table from File

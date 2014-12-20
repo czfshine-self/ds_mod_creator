@@ -1,5 +1,5 @@
 require "module.class"
-require "module.ID"
+
 
 
 Editor=Class(function(self,frame)
