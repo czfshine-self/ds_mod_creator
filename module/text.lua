@@ -1,6 +1,3 @@
--- coding: UTF-8 -------
---封装文本框
--------------------------------------
 require "module.class"
 
 Text=Class(function(self,frame)

@@ -1,5 +1,5 @@
 require "module.class"
-
+--[[
 Process=Class(function (self,frame,cmdmod)
       
   end)
@@ -27,5 +27,5 @@ function Process:Run(cmd,sync)
   end
     
   end
-  
+  ]]
   return Process

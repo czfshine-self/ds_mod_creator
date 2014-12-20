@@ -1,24 +1,21 @@
--- coding: UTF-8--------
---封装树形框
-------------------------------
 require("module.class")
 
+
 Tree=Class(function(self,frame,data)
-    
-  self.notebook= wxaui.wxAuiNotebook(frame, wx.wxID_ANY,
-                  wx.wxDefaultPosition, wx.wxDefaultSize,
-                  wxaui.wxAUI_NB_BOTTOM+
-                  wxaui.wxAUI_NB_TAB_SPLIT+
-                  wxaui.wxAUI_NB_TAB_MOVE+
-                  wxaui.wxAUI_NB_TAB_EXTERNAL_MOVE)
-  
-	 self.tree = wx.wxTreeCtrl(self.notebook, wx.wxID_ANY,
+
+
+
+  self.notebook= wxaui.wxAuiNotebook(frame, wx.wxID_ANY,wx.wxDefaultPosition, wx.wxDefaultSize,
+    wxaui.wxAUI_NB_BOTTOM+wxaui.wxAUI_NB_TAB_SPLIT+wxaui.wxAUI_NB_TAB_MOVE+wxaui.wxAUI_NB_TAB_EXTERNAL_MOVE)
+	 self.tree = wx.wxTreeCtrl( self.notebook, wx.wxID_ANY,
                           wx.wxDefaultPosition, wx.wxSize(-1, 200),
                           wx.wxTR_LINES_AT_ROOT + wx.wxTR_HAS_BUTTONS )
-                        
 	local tree=self.tree
   self.notebook:AddPage(self.tree,"..")
   
+
+	
+
 	local root_id = tree:AddRoot( "Root" )
 	local parent_id = tree:AppendItem( root_id, "Parent " )
 	local child_id = tree:AppendItem( parent_id, "Child " )

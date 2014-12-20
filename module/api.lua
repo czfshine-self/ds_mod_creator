@@ -53,7 +53,7 @@ addapi("Text",function (self)
     BestSize(200,200)
   return self.api
 end)
-addapi("RunText",function (self)
+addapi("Run",function (self)
   self.api=wxaui.wxAuiPaneInfo():
     Name(""):
     Caption(""):

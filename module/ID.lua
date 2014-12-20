@@ -1,5 +1,3 @@
-
-
 require "module.class"
 
 
@@ -7,6 +5,7 @@ ID=Class(function(self)
 	 self.COUNTER = wxID_HIGHEST + 1
 
 end)
+
 
 
 function ID:New ()

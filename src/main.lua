@@ -10,12 +10,13 @@ require("wx")
 setmetatable(_G, {__index=wx})
 
 require("module.class")
-Menu=require("module.menu")
-MainWin=require("module.win")
+require("module.menu")
+require("module.win")
 
 idclass=require "module.ID"
 
 ID=idclass()
+
 
 --==string================
 strings={}
@@ -39,6 +40,7 @@ function MyApp:OnInit()
   
   require "module.event"
   eventfn.frame=frame
+
 
 	local menu=Menu(frame)
 	local menubar=menu.menubar

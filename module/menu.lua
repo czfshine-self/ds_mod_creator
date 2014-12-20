@@ -4,7 +4,7 @@
 require("module.class")
 require "module.event"
 
-local Meun=Class(function (self,frame)
+Menu=Class(function (self,frame)
 
 	self.menubar=wx.wxMenuBar() --菜单栏
   self.frame=frame
@@ -22,7 +22,7 @@ local Meun=Class(function (self,frame)
 
 end)
 
-function Meun:Add(menu,name,eventname,str)
+function Menu:Add(menu,name,eventname,str)
   --增加菜单项
   local id=ID:New()
   self.ID[name]=id
