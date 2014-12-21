@@ -13,6 +13,38 @@ MainWin = Class(wxFrame,function(self,parent,id,title,pos,size,style,name)
 
 	self.frame=wx.wxFrame(parent,id,title,pos,size,style,name)
 	local frame=self.frame
+  
+  local xpmdata =
+{
+    "16 16 5 1",
+    "  c None",
+    "a c Black",
+    "b c #FFFFFF",
+    "c c #808080",
+    "d c #9DBDCD",
+    "  aaaaaaaaaaaa  ",
+    "  addddddddddac ",
+    "  adaaaaaaaadac ",
+    "  adabbbbbbadac ",
+    "  adabbbbbbadac ",
+    "  adaaaaaaaadac ",
+    "  addddddddddac ",
+    "  adaadaadaadac ",
+    "  adaadaadaadac ",
+    "  addddddddddac ",
+    "  adaadaadaadac ",
+    "  adaadaadaadac ",
+    "  addddddddddac ",
+    "  aaaaaaaaaaaac ",
+    "  ccccccccccccc ",
+    "  aaaaaaaaaaaac "
+}
+  
+  --frame:SetCursor(wxCursor( 1,wxImage(wx.wxBitmap(xpmdata))))
+  frame:SetCursor(wxCursor(2))
+  
+  im=wxImage(wx.wxBitmap(xpmdata))
+  im:SaveFile("1.png")
 	aui=Aui(frame)
 
 
