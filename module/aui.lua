@@ -4,7 +4,7 @@ require "module.editor"
 require "module.text"
 require "module.api"
 require "module.run"
-require "module.Grid"
+require "module.grid"
 Aui=Class(function (self,frame)
 
 	self.m_mgr = wxaui.wxAuiManager()
