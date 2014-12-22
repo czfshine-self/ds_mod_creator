@@ -10,6 +10,20 @@
 在bin/spriter/目录里有免费版的`Spriter`（win32 与 linux32版）
 软件，用来编辑scml文件。
 
+注:linux下spriter需要安装依赖库
+
+
+64位
+```sh
+sudo apt-get install libqt4-webkit libqt4-help phonon
+```
+
+32位
+```sh
+sudo apt-get install libqt4-webkit libqt4-help phonon
+```
+
+
 
 说明：
 ================================
