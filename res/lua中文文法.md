@@ -1,76 +1,70 @@
 LUA 5.1 BNF
 ================
-**chunk** ::= {stat [\`;´]} [laststat [`;´]]
-
 **语句组** ::= {语句段 [\`;´]} [段尾 [`;´]]
-
-**block** ::= chunk
 
 **语句块** ::= 语句组
 
-**stat** ::=  varlist \`=´ explist | 
-
 **语句段** ::=  值列 \`=´ 表达式列 | 
 
->>> functioncall | 
+>>> 函数调用 | 
 
->>>**do** block **end** | 
+>>>**do** 语句块 **end** | 
 			
->>>**while** exp **do** block **end** | 
+>>>**while** 表达式 **do** 语句块 **end** | 
 			
->>>**repeat** block **until** exp | 
+>>>**repeat** 语句块 **until** 表达式 | 
 			
->>>**if** exp **then** block {**elseif** exp **then** block} [**else** block] **end** | 
+>>>**if** 表达式 **then** 语句块 {**elseif** 表达式 **then** 语句块} [**else** 语句块] **end** | 
 			
->>>**for** Name \`=´ exp \`,´ exp [\`,´ exp] **do** block **end** | 
+>>>**for** 变量 \`=´ 表达式 \`,´ 表达式 [\`,´ 表达式] **do** 语句块 **end** | 
 			
->>>**for** namelist **in** explist **do** block **end** | 
+>>>**for** 变量列 **in** 表达式列 **do** 语句块 **end** | 
 			
->>>**function** funcname funcbody | 
+>>>**function** 函数名 函数体 | 
 			
->>>**local** **function** Name funcbody | 
+>>>**local** **function** 变量 函数体 | 
 			
->>>**local** namelist [\`=´ explist] 
+>>>**local** 变量列 [\`=´ 表达式列] 
 
-**laststat** ::= **return** [explist] | **break**
+**段尾** ::= **return** [表达式列] | **break**
 
-**funcname** ::= Name {\`.´ Name} [\`:´ Name]
+**函数名** ::= 变量 {\`.´ 变量} [\`:´ 变量]
 
-**varlist** ::= var {`,´ var}
+**值列** ::= 值 {`,´ 值}
 
-**var** ::=  Name | prefixexp \`[´ exp \`]´ | prefixexp `.´ Name 
+**值** ::=  变量 | 前缀表达式 \`[´ 表达式 \`]´ | 前缀表达式 `.´ 变量 
 
-**namelist** ::= Name {`,´ Name}
+**变量列** ::= 变量 {`,´ 变量}
 
-**explist** ::= {exp `,´} exp
+**表达式列** ::= {表达式 `,´} 表达式
 
-**exp** ::=  **nil** | **false** | **true** | Number | String | `...´ | function | 
-prefixexp | tableconstructor | exp binop exp | unop exp 
+**表达式** ::=  **nil** | **false** | **true** | 数字 | 字符串 | `...´ | 函数 | 
+前缀表达式 | 表构造子 | 表达式 二元符 表达式 | 一元符 表达式
 
-**prefixexp** ::= var | functioncall | \`(´ exp `)´
+**前缀表达式** ::= 值 | 函数调用 | \`(´ 表达式 `)´
 
-**functioncall** ::=  prefixexp args | prefixexp `:´ Name args 
+**函数调用** ::=  前缀表达式 参数 | 前缀表达式 `:´ 变量 参数
 
-**args** ::=  \`(´ [explist] `)´ | tableconstructor | String 
+**参数** ::=  \`(´ [值列] `)´ | 表构造子 | 字符串
 
-**functio**n ::= **function** funcbody
+**函数** ::= **function** 函数体
 
-**funcbody** ::= \`(´ [parlist] `)´ block **end**
+**函数体** ::= \`(´ [] `)´ block **end**
 
-**parlist** ::= namelist [\`,´ \`...´] | `...´
+**形参** ::= 变量列 [\`,´ \`...´] | `...´
 
-**tableconstructor** ::=\ \`{´ [fieldlist] \`}´
+**表构造子** ::=\ \`{´ [域列] \`}´
 
-**fieldlist** ::= field {fieldsep field} [fieldsep]
+**域列** ::= 域 {域分隔符 域} [域分隔符]
 
-**field** ::= \`[´ exp \`]´ \`=´ exp | Name \`=´ exp | exp
+**域** ::= \`[´ 表达式 \`]´ \`=´ 表达式 | 变量 \`=´ 表达式 | 表达式
 
-**fieldsep** ::= \`,´ | `;´
+**域分隔符** ::= \`,´ | `;´
 
-**binop** ::= \`+´ | \`-´ | \`*´ | \`/´ | \`^´ | \`%´ | \`..´ | 
+**二元符** ::= \`+´ | \`-´ | \`*´ | \`/´ | \`^´ | \`%´ | \`..´ | 
 
 >>>\`<´ | \`<=´ | \`>´ | \`>=´ | \`==´ | `~=´ | 
 
 >>>**and** | **or**
 
-**unop** ::= \`-´ | **not** | `#´
+**一元符** ::= \`-´ | **not** | `#´
