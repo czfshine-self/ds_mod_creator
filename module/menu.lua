@@ -6,6 +6,8 @@ require "module.event"
 
 Menu=Class(function (self,frame)
 
+啦啦啦=1
+print_lua(啦啦啦)
 	self.menubar=wx.wxMenuBar() --菜单栏
   self.frame=frame
   self.ID={}
