@@ -1,12 +1,12 @@
---dofile("unallzip")
---dofile("getrequire.lua")
-
-require"tablesave"
-
+-------------------------------------------------------
+require "tablesave"
+-------------------------------------------------------
 ziptable=table.load("zip.lua")
 retable=table.load("re.lua")
+
+-------------------------------------------------------------------
 animpath="E:\\ds\\data\\anim"
---animpath="E:\\ds\\data\\DLC0001\\anim"
+
 local tmp = "/tmp"
 local sep = "\\"
 local upper = ".."
