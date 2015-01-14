@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b5">
+    <folder id="0" name="wand">
+        <file id="0" name="wand/wand.png" width="100" height="100" pivot_x="0.490099" pivot_y="0.113861"/>
+    </folder>
+    <entity id="0" name="swap_wand">
+        <animation id="0" name="BUILD" length="1000">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" name="wand" folder="0" file="0" abs_x="0.009901" abs_y="-1.613861" abs_pivot_x="0.490099" abs_pivot_y="0.113861" abs_angle="360" abs_scale_x="1" abs_scale_y="1" abs_a="1" timeline="0" key="0" z_index="0"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="wand">
+                <key id="0" spin="0">
+                    <object folder="0" file="0" x="0.009901" y="-1.613861" pivot_x="0.490099" pivot_y="0.113861"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>
