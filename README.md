@@ -33,4 +33,4 @@ bin/linux/x64/lua src/main.lua
 
 没有github账号的，点击右方的`Download Zip`按钮下载这个项目，要提交代码的话联系`1486276329@qq.com`。
 
-欢迎加入qq群411237587，一起讨论。
+
