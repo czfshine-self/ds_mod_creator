@@ -8,17 +8,17 @@
 ---------------------------------
 
 --饥荒目录
-local ds_dir="E:\\ds"
+local ds_dir="H:\\ds1"
 
 --------------------------------
 --获取系统版本信息
 --------------------------------------------------
 -- put bin/ first to avoid conflicts with included modules
 -- that may have other versions present somewhere else in path/cpath.
-os.iswindows = os.getenv('WINDIR') 
+os.iswindows = os.getenv('WINDIR')
                   or (os.getenv('OS') or ''):match('[Ww]indows')
-os.islinux = not os.iswindows 
-                and not os.getenv('DYLD_LIBRARY_PATH') 
+os.islinux = not os.iswindows
+                and not os.getenv('DYLD_LIBRARY_PATH')
                 and io.open("/proc")
 os.arch = "x86" -- use 32bit by default
 unpack = table.unpack or unpack
@@ -45,7 +45,7 @@ package.path  = 'lualibs/?.lua;lualibs/?/?.lua;lualibs/?/init.lua;lualibs/?/?/?.
 
 
 --路径分隔符
-if os.islinux then 
+if os.islinux then
   sep = "/"
 else
   sep="\\"
@@ -61,7 +61,7 @@ require"lfs"
 print (lfs._VERSION)
 
 
-function attrdir (path,fn)
+function attrdir (path)
   --目录迭代器
 	for file in lfs.dir(path) do
 		if file ~= "." and file ~= ".." then
@@ -73,13 +73,13 @@ function attrdir (path,fn)
 				attrdir (f)
 			elseif attr.mode == "file" then
         --如果是文件的话
-          fn(f,path)    
+          run(f,path)
 			end
 		end
 	end
 end
 
-function runktech(f,path)
+function run(f,path)
   --处理函数
   ext=f:sub(-3,-1)
 	--print(f,ext)

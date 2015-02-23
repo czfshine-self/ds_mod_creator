@@ -9,17 +9,17 @@
 ---------------------------------
 
 --饥荒目录
-local ds_dir="E:\\ds"
+local ds_dir="H:\\ds1"
 
 --------------------------------
 --获取系统版本信息
 --------------------------------------------------
 -- put bin/ first to avoid conflicts with included modules
 -- that may have other versions present somewhere else in path/cpath.
-os.iswindows = os.getenv('WINDIR') 
+os.iswindows = os.getenv('WINDIR')
                   or (os.getenv('OS') or ''):match('[Ww]indows')
-os.islinux = not os.iswindows 
-                and not os.getenv('DYLD_LIBRARY_PATH') 
+os.islinux = not os.iswindows
+                and not os.getenv('DYLD_LIBRARY_PATH')
                 and io.open("/proc")
 os.arch = "x86" -- use 32bit by default
 unpack = table.unpack or unpack
@@ -46,7 +46,7 @@ package.path  = 'lualibs/?.lua;lualibs/?/?.lua;lualibs/?/init.lua;lualibs/?/?/?.
 
 
 --路径分隔符
-if os.islinux then 
+if os.islinux then
   sep = "/"
 else
   sep="\\"
@@ -64,15 +64,15 @@ print (lfs._VERSION)
 ------------------------------------
 function xml2png(xmlpath,path)
   --接受xml路径与解析文件路径
-  
+
 	xmlfile=xml.load(xmlpath)
 	texture=xmlfile:find("Texture")
 
 	if texture then
-    
+
 		filen=tostring(texture.filename)
 		filen=path..filen:sub(1,-4).."png"
-    
+
 		print("start filename:"..filen)
 
 		im,err=wx.wxImage (filen,wx.wxBITMAP_TYPE_ANY)
@@ -130,4 +130,4 @@ function attrdir (path)
 	end
 end
 
---attrdir("E:/DLC0001")
+attrdir(ds_dir)
